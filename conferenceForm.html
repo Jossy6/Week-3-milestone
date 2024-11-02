@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Registration Form</title>
+</head>
+
+<body>
+    <form>
+        <br>
+        <h1>Conference Registration Form</h1>
+        <br>
+
+        <!--PERSONAL INFORMATION SECTION-->
+        <fieldset>
+            <legend><b>PERSONAL INFORMATION SECTION</b></legend>
+            <br>
+            <div>
+                <label for="name">Full name:</label>
+                <input type="text" name="name" id="name" placeholder="Enter your Full name" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter your phone number" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="company_name">Company name:</label>
+                <input type="text" name="company_name" id="company_name" placeholder="Enter your company name" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="job_title">Job title:</label>
+                <input type="text" name="job_title" id="job_title" placeholder="Enter your Job title" required>
+            </div>
+            <br>
+        </fieldset>
+        <br><br>
+
+        <!--CONFERENCE TRACK SELECTION SECTION-->
+        <fieldset>
+            <legend><b>CONFERENCE TRACK SELECTION</b></legend>
+            <br>
+                <label for="track_selection"><b>Select a track:</b></label>
+                <select id="track_selection" name="track_selection" required>
+                    <option value="">Select an option</option>
+                    <option value="Web_Dev">Web Development</option>
+                    <option value="UI/UX">UI/UX Design</option>
+                    <option value="cloud_computing">Cloud Computing</option>
+                </select>
+                <br><br>
+
+                <!--WEB DEVELOPMENT OPTION-->
+                <fieldset>
+                    <legend><b>Web Development Track</b></legend>
+                    <br>
+                    <label for="web_morning_session">Morning Session Preference:</label><br>
+                    <input type="radio" name="web_morning_session" value="session1" id="web_morning_session">First session (7:00 AM - 9:00 AM)<br>
+                    <input type="radio" name="web_morning_session" value="session2" id="web_morning_session">Second session (9:30AM - 11:30AM)<br>
+                    <br>
+
+                    <label for="web_afternoon_session">Afternoon Session Preference:</label><br>
+                    <input type="radio" name="web_afternoon_session" value="session1" id="web_afternoon_session">First session (12:00 PM - 2:00 PM)<br>
+                    <input type="radio" name="web_afternoon_session" value="session2" id="web_afternoon_session">Second session (2:30 PM - 4:30 PM)<br>
+                    <br>
+
+                    <label>Workshop Selection:</label><br>
+                    <input type="radio" name="web_workshop" value="intro_to_web"> Beginners Class<br>
+                    <input type="radio" name="web_workshop" value="advanced_web"> Advanced Class<br>
+                    <br>
+                </fieldset>
+                <br>
+
+                <!--UI/VX DESIGN OPTION-->
+                <fieldset>
+                    <legend><b>UI/UX Design Track</b></legend>
+                    <br>
+                    <label for="ui_ux">Morning Session Preference:</label><br>
+                    <input type="radio" name="ui_ux" value="session1" id="ui_ux">First session (7:00 AM - 9:00 AM)<br>
+                    <input type="radio" name="ui_ux" value="session2" id="ui_ux">Second session (9:30AM - 11:30AM)<br>
+                    <br>
+
+                    <label for="ui_ux">Afternoon Session Preference:</label><br>
+                    <input type="radio" name="ui_ux" value="session1" id="ui_ux">First session (12:00 PM - 2:00 PM)<br>
+                    <input type="radio" name="ui_ux" value="session2" id="ui_ux">Second session (2:30 PM - 4:30 PM)<br>
+                    <br>
+
+                    <label>Workshop Selection:</label><br>
+                    <input type="radio" name="web_workshop" value="intro_to_web"> Beginners Class<br>
+                    <input type="radio" name="web_workshop" value="advanced_web"> Advanced Class<br>
+                    <br>
+                </fieldset>
+                <br>
+
+                <!--CLOUD COMPUTING OPTION-->
+                <fieldset>
+                    <legend><b>Cloud Computing Track</b></legend>
+                    <br>
+                    <label for="cloud_morning_session">Morning Session Preference:</label><br>
+                    <input type="radio" name="cloud_morning_session" value="session1" id="cloud_morning_session">First session (7:00 AM - 9:00 AM)<br>
+                    <input type="radio" name="cloud_morning_session" value="session2" id="cloud_morning_session">Second session (9:30AM - 11:30AM)<br>
+                    <br>
+
+                    <label for="cloud_afternoon_session">Afternoon Session Preference:</label><br>
+                    <input type="radio" name="cloud_afternoon_session" value="session1" id="cloud_afternoon_session">First session (12:00 PM - 2:00 PM)<br>
+                    <input type="radio" name="cloud_afternoon_session" value="session2" id="cloud_afternoon_session">Second session (2:30 PM - 4:30 PM)<br>
+                    <br>
+
+                    <label>Workshop Selection:</label><br>
+                    <input type="radio" name="cloud_workshop" value="intro_to_cloud"> Beginners Class<br>
+                    <input type="radio" name="cloud_workshop" value="advanced_cloud"> Advanced Class<br>
+                    <br>
+                </fieldset>
+                <br>
+        </fieldset>
+        <br><br>
+
+        <!--MENU PREFERENCE SECTION-->
+        <fieldset>
+            <legend><b>MEAL PREFERENCE</b></legend>
+            <br>
+
+            <!--Breakfast-->
+            <fieldset>
+                <legend><b>Breakfast</b></legend>
+                <div>
+                    <div>
+                        <label for="breakfast_option">Choose what you will like to have for breakfast:</label>
+                        <select id="breakfast_option" name="breakfast_option">
+                            <option value="">Select an option</option>
+                            <option value="breakfast_option">Breakfast 1</option>
+                            <option value="breakfast_option">Breakfast 2</option>
+                            <option value="breakfast_option">Breakfast 3</option>
+                            <option value="breakfast_option">Breakfast 4</option>
+                            <option value="breakfast_option">Breakfast 5</optio>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="dietry">Dietry Restriction:</label>
+                        <textarea id="dietry" name="dietry" placeholder="Write out your dietry restrictions"></textarea>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="seating">Seating Preference:</label>
+                        <select id="seating" name="seating">
+                            <option value="">Select an option</option>
+                            <option value="seating">Near the stage</option>
+                            <option value="seating">Near the back</option>
+                            <option value="seating">Middle section</option>
+                            <option value="seating">Aisle seat</option>
+                            <option value="seating">window seat</option>
+                            <option value="seating">close to exit</option>
+                            <option value="seating">Quiet area</option>
+                            <option value="seating">Accessible seatings</option>
+                        </select>
+                    </div>  
+                </div>
+                <br>
+            </fieldset>
+            <br>
+
+            <!--Lunch-->
+            <fieldset>
+                <legend><b>Lunch</b></legend>
+                <div>
+                    <div>
+                        <label for="lunch_option">Choose what you will like to have for breakfast:</label>
+                        <select id="lunch_option" name="lunch_option">
+                            <option value="">Select an option</option>
+                            <option value="lunch_option">Lunch 1</option>
+                            <option value="lunch_option">Lunch 2</option>
+                            <option value="lunch_option">Lunch 3</option>
+                            <option value="lunch_option">Lunch 4</option>
+                            <option value="lunch_option">Lunch 5</optio>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="dietry">Dietry Restriction:</label>
+                        <textarea id="dietry" name="dietry" placeholder="Write out your dietry restrictios"></textarea>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="seating">Seating Preference:</label>
+                        <select id="seating" name="seating">
+                            <option value="">Select an option</option>
+                            <option value="seating">Near the stage</option>
+                            <option value="seating">Near the back</option>
+                            <option value="seating">Middle section</option>
+                            <option value="seating">Aisle seat</option>
+                            <option value="seating">window seat</option>
+                            <option value="seating">close to exit</option>
+                            <option value="seating">Quiet area</option>
+                            <option value="seating">Accessible seatings</option>
+                        </select>
+                    </div>  
+                </div>
+                <br>
+            </fieldset>
+            <br>
+
+            <!--Dinner-->
+            <fieldset>
+                <legend><b>Dinner</b></legend>
+                <div>
+                    <div>
+                        <label for="dinner_option">Choose what you will like to have for breakfast:</label>
+                        <select id="dinner_option" name="breakfast_option">
+                            <option value="">Select an option</option>
+                            <option value="dinner_option">Dinner 1</option>
+                            <option value="dinner_option">Dinner 2</option>
+                            <option value="dinner_option">Dinner 3</option>
+                            <option value="breakfast_option">Dinner 4</option>
+                            <option value="breakfast_option">Dinner 5</optio>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="dietry">Dietry Restriction:</label>
+                        <textarea id="dietry" name="dietry" placeholder="Write out your dietry restrictios"></textarea>
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="seating">Seating Preference:</label>
+                        <select id="seating" name="seating">
+                            <option value="">Select an option</option>
+                            <option value="seating">Near the stage</option>
+                            <option value="seating">Near the back</option>
+                            <option value="seating">Middle section</option>
+                            <option value="seating">Aisle seat</option>
+                            <option value="seating">window seat</option>
+                            <option value="seating">close to exit</option>
+                            <option value="seating">Quiet area</option>
+                            <option value="seating">Accessible seatings</option>
+                        </select>
+                    </div>  
+                </div>
+                <br>
+            </fieldset>
+            <br>
+            </fieldset>
+        </fieldset>
+        <br>
+
+        <!--ADDITIONAL ATTENDEE-->
+        <fieldset>
+            <legend><b>ADDITIONAL ATTENDEE</b></legend>
+            <br>
+            <label>Do you have additional attendee or attendees?</label><br>
+            <input type="radio" name="add_attendee" value="yes">Yes<br>
+            <input type="radio" namr="add_attendee" value="no">No<br>
+            <br>
+            <label for="num_add_attendee">If yes, number of additonal attendee</label>
+            <input type="number" name="num_add_attendee" id="num_add_attendee" min="0" max="3" placeholder="Enter the numbers of the additional attendee">
+  
+
+            <br><br>       <!--Attendee 1 INFORMATION SECTION-->
+            <fieldset>
+                <br>
+                <legend><b>ATTENDEE 1</b></legend>
+                <fieldset>
+                    <legend><b>Attendee 1 Basic Information</b></legend>
+                    <div>
+                        <label for="name">Full name:</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your Full name" required>
+                    </div>
+                    <br>
+    
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                    </div>
+                    <br>
+                </fieldset>
+                <br>
+    
+                <!--Attendee Conference Track section-->
+                <fieldset>
+                    <legend><b>Attendee 1 Conference Selection</b></legend>
+                    <br>
+                    <label for="track_selection"><b>Select a track:</b></label>
+                    <select id="track_selection" name="track_selection" required>
+                        <option value="">Select an option</option>
+                        <option value="Web_Dev">Web Development</option>
+                        <option value="UI/UX">UI/UX Design</option>
+                        <option value="cloud_computing">Cloud Computing</option>
+                    </select>
+                    <br><br>
+    
+                    <label for="web_morning_session">Morning Session Preference:</label><br>
+                    <input type="radio" name="web_morning_session" value="session1" id="web_morning_session">First session (7:00 AM - 9:00 AM)<br>
+                    <input type="radio" name="web_morning_session" value="session2" id="web_morning_session">Second session (9:30AM - 11:30AM)<br>
+                    <br>
+    
+                    <label for="web_afternoon_session">Afternoon Session Preference:</label><br>
+                    <input type="radio" name="web_afternoon_session" value="session1" id="web_afternoon_session">First session (12:00 PM - 2:00 PM)<br>
+                    <input type="radio" name="web_afternoon_session" value="session2" id="web_afternoon_session">Second session (2:30 PM - 4:30 PM)<br>
+                    <br>
+    
+                    <label>Workshop Selection:</label><br>
+                    <input type="radio" name="web_workshop" value="intro_to_web"> Beginners Class<br>
+                    <input type="radio" name="web_workshop" value="advanced_web"> Advanced Class<br>
+                    <br><br>
+                </fieldset>
+                <br>
+    
+                <!--Attendee Menu Preference-->
+                <fieldset>
+                    <legend><b>Attendee 1 Meal Preference</b></legend>
+                        <br>
+                        <div>
+                            <label for="breakfast_option">Choose what you will like to have for breakfast:</label>
+                            <select id="breakfast_option" name="breakfast_option">
+                                <option value="">Select an option</option>
+                                <option value="breakfast_option">Breakfast 1</option>
+                                <option value="breakfast_option">Breakfast 2</option>
+                                <option value="breakfast_option">Breakfast 3</option>
+                                <option value="breakfast_option">Breakfast 4</option>
+                                <option value="breakfast_option">Breakfast 5</optio>
+                            </select>
+                        </div>
+                        <br>
+
+                        <div>
+                            <label for="lunch_option">Choose what you will like to have for Lunch:</label>
+                            <select id="lunch_option" name="lunch_option">
+                                <option value="">Select an option</option>
+                                <option value="lunch_option">Lunch 1</option>
+                                <option value="lunch_option">Lunch 2</option>
+                                <option value="lunch_option">Lunch 3</option>
+                                <option value="lunch_option">Lunch 4</option>
+                                <option value="lunch_option">Lunch 5</optio>
+                            </select>
+                        </div>
+                        <br>
+
+                        <div>
+                            <label for="dinner_option">Choose what you will like to have for Dinner:</label>
+                            <select id="dinner_option" name="breakfast_option">
+                                <option value="" disable selscted>Select an option</option>
+                                <option value="dinner_option">Dinner 1</option>
+                                <option value="dinner_option">Dinner 2</option>
+                                <option value="dinner_option">Dinner 3</option>
+                                <option value="breakfast_option">Dinner 4</option>
+                                <option value="breakfast_option">Dinner 5</optio>
+                            </select>
+                        </div>
+                        <br>
+                        <br>
+                </fieldset>
+                <br>
+            </fieldset>
+            <br><br>
+
+            <!--Attendee 2 BASIC INFORMATION SECTION-->
+            <br><br>       
+            <fieldset>
+                <br>
+                <legend><b>ATTENDEE 2</b></legend>
+                <fieldset>
+                    <legend><b>Attendee 2 Basic Information</b></legend>
+                    <div>
+                        <label for="name">Full name:</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your Full name" required>
+                    </div>
+                    <br>
+    
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                    </div>
+                    <br>
+                </fieldset>
+                <br>
+    
+                <!--Attendee 2 Conference Track section-->
+                <fieldset>
+                    <legend><b>Attendee 2 Conference Selection</b></legend>
+                    <br>
+                    <label for="track_selection"><b>Select a track:</b></label>
+                    <select id="track_selection" name="track_selection" required>
+                        <option value="">Select an option</option>
+                        <option value="Web_Dev">Web Development</option>
+                        <option value="UI/UX">UI/UX Design</option>
+                        <option value="cloud_computing">Cloud Computing</option>
+                    </select>
+                    <br><br>
+    
+                    <label for="web_morning_session">Morning Session Preference:</label><br>
+                    <input type="radio" name="web_morning_session" value="session1" id="web_morning_session">First session (7:00 AM - 9:00 AM)<br>
+                    <input type="radio" name="web_morning_session" value="session2" id="web_morning_session">Second session (9:30AM - 11:30AM)<br>
+                    <br>
+    
+                    <label for="web_afternoon_session">Afternoon Session Preference:</label><br>
+                    <input type="radio" name="web_afternoon_session" value="session1" id="web_afternoon_session">First session (12:00 PM - 2:00 PM)<br>
+                    <input type="radio" name="web_afternoon_session" value="session2" id="web_afternoon_session">Second session (2:30 PM - 4:30 PM)<br>
+                    <br>
+    
+                    <label>Workshop Selection:</label><br>
+                    <input type="radio" name="web_workshop" value="intro_to_web"> Beginners Class<br>
+                    <input type="radio" name="web_workshop" value="advanced_web"> Advanced Class<br>
+                    <br><br>
+                </fieldset>
+                <br>
+    
+                <!--Attendee 2 MENU PREFERENCE-->
+                <fieldset>
+                    <legend><b>Attendee 2 Meal Preference</b></legend>
+                        <br>
+                        <div>
+                            <label for="breakfast_option">Choose what you will like to have for breakfast:</label>
+                            <select id="breakfast_option" name="breakfast_option">
+                                <option value="">Select an option</option>
+                                <option value="breakfast_option">Breakfast 1</option>
+                                <option value="breakfast_option">Breakfast 2</option>
+                                <option value="breakfast_option">Breakfast 3</option>
+                                <option value="breakfast_option">Breakfast 4</option>
+                                <option value="breakfast_option">Breakfast 5</optio>
+                            </select>
+                        </div>
+                        <br>
+
+                        <div>
+                            <label for="lunch_option">Choose what you will like to have for Lunch:</label>
+                            <select id="lunch_option" name="lunch_option">
+                                <option value="">Select an option</option>
+                                <option value="lunch_option">Lunch 1</option>
+                                <option value="lunch_option">Lunch 2</option>
+                                <option value="lunch_option">Lunch 3</option>
+                                <option value="lunch_option">Lunch 4</option>
+                                <option value="lunch_option">Lunch 5</optio>
+                            </select>
+                        </div>
+                        <br>
+
+                        <div>
+                            <label for="dinner_option">Choose what you will like to have for Dinner:</label>
+                            <select id="dinner_option" name="breakfast_option">
+                                <option value="" disable selscted>Select an option</option>
+                                <option value="dinner_option">Dinner 1</option>
+                                <option value="dinner_option">Dinner 2</option>
+                                <option value="dinner_option">Dinner 3</option>
+                                <option value="breakfast_option">Dinner 4</option>
+                                <option value="breakfast_option">Dinner 5</optio>
+                            </select>
+                        </div>
+                        <br>
+                        <br>
+                </fieldset>
+                <br>
+            </fieldset>
+            <br>
+
+            <!--Attendee 3 INFORMATION SECTION-->
+            <br><br>      
+            <fieldset>
+                <br>
+                <legend><b>ATTENDEE 3</b></legend>
+                <fieldset>
+                    <legend><b>Attendee 3 Basic Information</b></legend>
+                    <div>
+                        <label for="name">Full name:</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your Full name" required>
+                    </div>
+                    <br>
+    
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                    </div>
+                    <br>
+                </fieldset>
+                <br>
+    
+                <!--Attendee 3 Conference Track section-->
+                <fieldset>
+                    <legend><b>Attendee 3 Conference Selection</b></legend>
+                    <br>
+                    <label for="track_selection"><b>Select a track:</b></label>
+                    <select id="track_selection" name="track_selection" required>
+                        <option value="">Select an option</option>
+                        <option value="Web_Dev">Web Development</option>
+                        <option value="UI/UX">UI/UX Design</option>
+                        <option value="cloud_computing">Cloud Computing</option>
+                    </select>
+                    <br><br>
+    
+                    <label for="web_morning_session">Morning Session Preference:</label><br>
+                    <input type="radio" name="web_morning_session" value="session1" id="web_morning_session">First session (7:00 AM - 9:00 AM)<br>
+                    <input type="radio" name="web_morning_session" value="session2" id="web_morning_session">Second session (9:30AM - 11:30AM)<br>
+                    <br>
+    
+                    <label for="web_afternoon_session">Afternoon Session Preference:</label><br>
+                    <input type="radio" name="web_afternoon_session" value="session1" id="web_afternoon_session">First session (12:00 PM - 2:00 PM)<br>
+                    <input type="radio" name="web_afternoon_session" value="session2" id="web_afternoon_session">Second session (2:30 PM - 4:30 PM)<br>
+                    <br>
+    
+                    <label>Workshop Selection:</label><br>
+                    <input type="radio" name="web_workshop" value="intro_to_web"> Beginners Class<br>
+                    <input type="radio" name="web_workshop" value="advanced_web"> Advanced Class<br>
+                    <br><br>
+                </fieldset>
+                <br>
+    
+                <!--ATTENDEE 3 MENU PREFERENCE-->
+                <fieldset>
+                    <legend><b>Attendee 3 Meal Preference</b></legend>
+                        <br>
+                        <div>
+                            <label for="breakfast_option">Choose what you will like to have for breakfast:</label>
+                            <select id="breakfast_option" name="breakfast_option">
+                                <option value="">Select an option</option>
+                                <option value="breakfast_option">Breakfast 1</option>
+                                <option value="breakfast_option">Breakfast 2</option>
+                                <option value="breakfast_option">Breakfast 3</option>
+                                <option value="breakfast_option">Breakfast 4</option>
+                                <option value="breakfast_option">Breakfast 5</optio>
+                            </select>
+                        </div>
+                        <br>
+
+                        <div>
+                            <label for="lunch_option">Choose what you will like to have for Lunch:</label>
+                            <select id="lunch_option" name="lunch_option">
+                                <option value="">Select an option</option>
+                                <option value="lunch_option">Lunch 1</option>
+                                <option value="lunch_option">Lunch 2</option>
+                                <option value="lunch_option">Lunch 3</option>
+                                <option value="lunch_option">Lunch 4</option>
+                                <option value="lunch_option">Lunch 5</optio>
+                            </select>
+                        </div>
+                        <br>
+
+                        <div>
+                            <label for="dinner_option">Choose what you will like to have for Dinner:</label>
+                            <select id="dinner_option" name="breakfast_option">
+                                <option value="" disable selscted>Select an option</option>
+                                <option value="dinner_option">Dinner 1</option>
+                                <option value="dinner_option">Dinner 2</option>
+                                <option value="dinner_option">Dinner 3</option>
+                                <option value="breakfast_option">Dinner 4</option>
+                                <option value="breakfast_option">Dinner 5</optio>
+                            </select>
+                        </div>
+                        <br>
+                        <br>
+                </fieldset>
+                <br>
+            </fieldset>
+            <br>
+        </fieldset>
+        <br><br>
+        <button type="reset">Reset</button>
+        <button type="submit">Register</button>
+        <br><br>
+    </form>
+</body>
+</html>
